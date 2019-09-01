@@ -1,0 +1,641 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+
+    JULIAN LEON V. 1.0 - 2019
+    YES, I WROTE ALL OF THIS! (Except from the reset css)
+
+    CSS layout percentages according to the golden ratio
+    100             100     
+    61.804697157    61.8110     
+    38.1982059067   38.1890     
+    23.60828548     23.6021     
+    14.5910293449   14.5869     
+    9.0179414987    9.0152      
+    5.5735114331    5.5717      
+    3.4446918622    3.4435      
+    2.1289813734    2.1282      
+    1.3158104904    1.3153      
+    0.8132326888    0.8129      
+    0.5026160005    0.5024      
+    0.310640297     0.3105      
+    0.1919902948    0.1919
+    0.1186590203    0.1186
+    0.07333684815   0.0733
+    0.0453256169    0.0453
+    0.02801336026   0.0280
+    0.01731357247   0.0173
+*/
+
+/********/
+/* BODY */
+
+body, html {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+    letter-spacing: 0.125rem;
+	color: #0E151F;
+	background: #2E2E2E;
+}
+
+img, embed, object, video, canvas {
+	max-width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-style: normal;
+	font-weight: 700;
+}
+
+p {
+	font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.325rem;
+}
+
+ul li {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400
+        ;
+    line-height: 1.25rem;
+	color: #000;
+}
+
+h1 {
+	font-size: 1.5rem;
+    margin: 0.67rem 0; 
+}
+
+h2 {
+	font-size: 1.375rem;
+    margin: 0.75rem 0;
+}
+
+h3 {
+	font-size: 1.125rem;
+    margin: 0.83rem 0;
+}
+
+h4 {
+	font-size: 1rem;
+    margin: 1.12rem 0;
+}
+
+h5 {
+	font-size: 0.75rem;
+    margin: 0.15rem 0;
+}
+
+h6 {
+	font-size: 0.6275rem;
+    margin: 1.67rem 0;
+}
+
+a:link {
+	text-decoration: none;
+	color: #376098;
+}
+
+a:visited {color: #666;}
+
+a:hover {color: #33A85F;}
+
+a:active {color: #1D4F30;}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.normal {font-weight: 400;}
+
+.bold {font-weight: 700;}
+
+.main-wrap {
+	width: 100%;
+	height: 100%;
+	/*margin: auto;*/
+}
+
+.preloader {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: -1.5rem auto;
+    width: 3rem;
+    height: 3rem;
+    z-index: 5000!important;
+}
+
+.preloader span {
+    position: absolute;
+    display: inline;
+    width: 1px;
+    height: 3rem;
+    background: #EEE;
+}
+
+.no-display {
+    opacity: 0;
+}
+
+/**********/
+/* HEADER */
+
+.top-header-cont {
+    position: fixed;
+    top: 0;
+    background: #EFEFEF;
+    opacity: 0.975;
+    z-index: 1000;
+}
+
+#branding {
+    float: left;
+}
+
+
+/***********/
+/* SECTION & CONTENT */
+
+/* content & columns NEW CLASS SYSTEM */
+/*  for responsive and fixed widths
+.fluid {width: 100% !important;} < responsive
+.fixed {width: inherit !important;} < fixed width
+*/
+
+/*  61.804697157    61.8110     
+    38.1982059067   38.1890     
+    23.60828548     23.6021     
+    14.5910293449   14.5869     
+    9.0179414987    9.0152      
+    5.5735114331    5.5717      
+    3.4446918622    3.4435      
+    2.1289813734    2.1282      
+    1.3158104904    1.3153
+*/
+
+.content-wrap {
+    width: 100%;
+    height: 100%;/* test for full height div */
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.kl {
+    position: relative;
+    display: block;
+}
+
+.w10 {width: 100%;}
+.w9 {width: 90.9848%;}
+.w8 {width: 76.3979%;}
+.w6 {width: 61.8110%}
+.w5 {width: 50%}
+.w4 {width: 38.1890%;}
+.w2 {width: 23.6021%;}
+.w1 {width: 9.0152%;}
+
+.h10 {height: 100%;}
+.h5 {height: 50vh;}
+
+/* for full viewport background test */
+.full-height {
+    display: block; /* for debugging */
+    position: fixed;
+    overflow: auto;
+    width: 101%;
+    height: 100vh;
+    float: left;
+    clear: none;
+}
+
+.pad-none {padding: 0;}
+.pad-left {padding: 3rem 5.5717% 3rem 9.0152%;}
+.pad-right {padding: 3rem 9.0152% 3rem 5.5717%;}
+.pad-normal {padding: 3rem 9.0152% 3rem 9.0152%;}
+
+.dark-bg, .dark {background: #2E2E2E;}
+
+.light-bg, .light {background: #EEE;}
+
+.dark * {color: #EEE;}
+.light * {color: #333;}
+
+.font-lg {font-weight: 300;}
+
+.grey {color: #EEE!important;}
+
+.bg-gr {background-color: #EEE;}/*for full height test*/
+
+.spacer-big {
+    padding-top: 14.5869%;
+    height: auto;
+    clear: both;
+}
+
+.spacer {
+    padding-top: 5.5717%%;
+    height: auto;
+    clear: both;
+}
+
+.br-1 {margin: 1rem;}
+.br-3 {margin: 3rem;}
+.br-5 {margin: 5rem;}
+.br-7 {margin: 7.5rem;}    
+
+.top-1{top: 9.0152%;}
+.top-2{top: 14.5869%;}
+.top-3{top: 23.6021%;}
+.top-4{top: 38.1890%;}
+.top-5{top: 61.8110%;}
+.top-5{top: 61.8110%;}
+
+.spacer-1{padding-top: 9.0152%;}
+.spacer-2{padding-top: 14.5869%;}
+.spacer-3{padding-top: 23.6021%;}
+.spacer-4{padding-top: 38.1890%;}
+.spacer-5{padding-top: 61.8110%;}
+
+.dark {
+    background: #2E2E2E;
+}
+
+.dark * {
+    color: #EEE;
+}
+
+.light {
+    background: #EEE;
+}
+
+.light * {
+    color: #333;
+}
+
+.grey {
+    color: #EEE!important;
+}
+
+.bg-cont {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-cont {
+    position: absolute;
+    /*background: #666;for testing only, delete*/
+}
+
+.lg {
+    font-weight: 300;
+    letter-spacing: 0.236021em;
+}
+
+.align-center {text-align: center;}
+.align-left {text-align: left;}
+.align-right {text-align: right;}
+
+.line-br {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: 0;
+    height: 1px;
+    background: #666;
+}
+
+/*
+    MOST COMMON BREAKPOINTS GROUPS
+    
+    max 599px mobile
+    min 600px tablet portrait
+    min 900px tablet landscapce
+    min 1200px desktop normal
+    min 1800px desktop large
+
+*/
+
+/***********/
+/* MOBILE & TABLET PORTRAIT */
+
+@media screen and (max-width: 899px) {
+
+    /**************/
+    /* NAVIGATION */
+    
+    .top-header-cont {
+        width: 81.9696%;
+        padding: 5.5717% 9.0152% 5.5717% 9.0152%;
+    }
+    
+    #main-nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 100vh;
+        background: #FFF;
+        color: #FFF;
+    }
+    
+    #main-nav ul {
+        padding-top: 9rem;
+    }
+    
+    #main-nav ul li {
+        display: block;
+        text-align: center;
+        padding: 2em;
+        opacity: 1;
+        border-left: none;
+    }
+    
+    #main-nav ul li a {
+        font-size: 150%;
+        color: #0E151F;
+    }
+    
+    .toggle-menu {
+        position: relative;
+        display: block;
+        float: right;
+        z-index: 2000;
+        width: 1.5rem;
+        overflow: hidden;
+        text-align: right;
+    }
+    
+    .toggle-menu span {
+        display: block;
+        float: right;
+        height: 1px;
+        background: #0E151F;
+    }
+    
+    .toggle-menu span:nth-child(1) {
+        width: 1.125rem;
+        margin-top: 0;
+        -webkit-transition: .125s ease-in-out;
+        -moz-transition: .125s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+    
+    .toggle-menu span:nth-child(2) {
+        width: 1.365rem;
+        margin-top: 0.5rem;
+        -webkit-transition: .125s ease-in-out;
+        -moz-transition: .125s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+    
+    .toggle-menu span:nth-child(3) {
+        width: 1.125rem;
+        margin-top: 0.5rem;
+        -webkit-transition: .125s ease-in-out;
+        -moz-transition: .125s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }    
+    
+    .collapse span:nth-child(1) {
+        margin-top: 0.5rem;
+        -webkit-transition: .125s ease-in-out;
+        -moz-transition: .125s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+    
+    .collapse span:nth-child(2) {
+        margin-top: -1rem;
+        -webkit-transition: .125s ease-in-out;
+        -moz-transition: .125s ease-in-out;
+        -o-transition: .125s ease-in-out;
+        transition: .125s ease-in-out;
+    }
+    
+    .collapse span:nth-child(3) {
+        margin-top: 0;
+        -webkit-transition: .125s ease-in-out;
+        -moz-transition: .125s ease-in-out;
+        -o-transition: .125s ease-in-out;
+        transition: .125s ease-in-out;
+    }
+    
+    
+    /**************/
+    /* CONTENT */
+    
+    section {
+        display: block;
+    }
+    
+    .kl {
+        overflow: hidden !important;
+         
+    }
+    
+    .fluid {
+        display: block;
+    }
+    
+    .fixed {
+        display: flex;
+    }
+
+    .fluid [class*="pad-"] {
+        width: 81.9696% !important;
+        padding: 3rem 9.0152% 3rem 9.0152% !important;
+    }
+    
+    .fluid .pad-none {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+}
+
+
+/***********/
+/* TABLET LANDSCAPE */
+
+@media screen and (min-width: 900px) {
+    
+    /**************/
+    /* NAVIGATION */
+    
+    .top-header-cont {
+        width: 88.8566%;
+        padding: 2.1282% 5.5717% 2.1282% 5.5717%;
+    }
+    
+    .main-nav-cont {
+        float: right;
+    }
+
+    #main-nav {
+        display: inline !important;
+        overflow: auto;
+        height: inherit;
+    }
+
+    #main-nav ul {
+        float: right;
+    }
+
+    #main-nav ul li {
+        display: inline;
+        margin-left: 2rem;
+        padding-left: 0.75rem;
+        border-left: solid thin #0E151F;
+    }
+    
+    #main-nav ul li a {
+        font-size: 100%;
+        color: #0E151F;
+    }
+    
+    .toggle-menu {
+        display: none;
+        color: #F00;
+    }
+
+}
+
+/***********/
+/* LAPTOP & UP */
+
+@media screen and (min-width: 1200px) {
+    
+    /**************/
+    /* NAVIGATION */
+    
+    .top-header-cont {
+        width: 88.8566%;
+        padding: 2.1282% 5.5717% 2.1282% 5.5717%;
+    }
+}
+
+
+
+/*
+@media screen and (orientation: landscape) {
+    .top-header-cont{
+        padding: 4.53% 4rem 2.8% 4rem;
+    }
+    
+    #main-nav {
+        display: inline;
+    }
+    
+    .hr-line {
+        margin: 0 4rem 0.5rem 4rem;
+    }
+    
+    .left, .right, .full{
+        padding: 3rem 4rem 3rem 4rem;
+    }
+    
+}
+*/
+
+/*
+@media screen and (min-width: 860px) and (orientation: portrait) {
+    .top-header-cont {
+        padding: 4.53% 4rem 2.8% 4rem;    
+    }
+}
+*/
+
+
+/*  PERCENTAGES ACCORDING TO THE GOLDEN RATIO
+    100             100     
+    61.804697157    61.8110     
+    38.1982059067   38.1890     
+    23.60828548     23.6021     
+    14.5910293449   14.5869     
+    9.0179414987    9.0152      
+    5.5735114331    5.5717      
+    3.4446918622    3.4435      
+    2.1289813734    2.1282      
+    1.3158104904    1.3153      
+    0.8132326888    0.8129      
+    0.5026160005    0.5024      
+    0.310640297     0.3105      
+    0.1919902948    0.1919
+    0.1186590203    0.1186
+    0.07333684815   0.0733
+    0.0453256169    0.0453
+    0.02801336026   0.0280
+    0.01731357247   0.0173
+*/
+

@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Ian.Dev by Julian Leon</title>
+    <meta name="Title" content="Ian.Dev by Julian Leon">
+    <meta name="description" content="Front-end developer, UI, UX designer located in Reykjavík, Iceland">
+    <meta name="author" content="Julian Leon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://d3dy5gmtp8yhk7.cloudfront.net/2.1/pusher.min.js" async></script>
+    <script src="js/common/canvas-handler.js" async></script>
+    <script src="js/main.js" async></script>
+    <script src="js/home.js" async></script>
+    <script src="js/work.js" async></script>
+    <script src="js/about.js" async></script>
+    <script src="js/project-phyllotaxis.js" async></script>
+    <script src="js/project-quad-curves.js" async></script>
+    <script src="js/project-bdnl.js" async></script>
+    
+    <!--<script src="js/libs/three.min.js" async></script>-->
+    
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="preloader">
+        <span></span>
+    </div><!-- preloader bar. to load async put in div containing .content-wrap before-->
+    
+    <div class="main-wrap">
+        <header id="top-header">
+            <div class="top-header-cont">
+                <div id="branding">
+                    <a href="index.html"><em>ia<sup>n</sup>.  &#91;dev&#93;</em></a>
+                </div>
+                
+                <div class="main-nav-cont">
+                    <nav id="main-nav">
+                        <ul class="active">
+                            <li><a href="work">Work</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="toggle-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div><!-- end .main-nav-cont -->
+            </div><!-- end .top-header -->
+        </header><!-- end #top-header -->
+        
+        <div class="content-wrap no-display" id="main-content">            
+            <section>
+                <div class="content-row fluid dark-bg">
+                    <div class="kl w10 dark pad-none">
+                        <canvas id="graph-home"></canvas>
+                        
+                        <div class="w2 pad-left overlay-cont top-2">                            
+                            <h3 class="grey">FRONT-END DEVELOPMENT</h3>
+                            <h3 class="grey">GENERATIVE ART</h3>
+                            <h3 class="grey">UX/UI RESEARCH &#38; DESIGN</h3>
+                            <h3 class="grey">VISUAL DESIGN</h3>
+                            <h4>by</h4>
+                            <h2>JULIAN LEON</h2>
+                            <br/>
+                            <a class="call-to-action" href="work">| Know my Work</a>
+                        </div>
+                    </div>
+                </div>
+            </section>            
+        </div><!-- end .content-wrap -->
+    </div><!-- end .main-wrap -->  
+        
+</body>
+    
+</html>
